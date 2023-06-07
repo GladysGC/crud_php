@@ -17,7 +17,7 @@ if(isset($_POST['submit'])) {
 	if($user == "" || $pass == "" || $name == "" || $email == "") {
 		echo "Todos los campos deben ser llenados. Uno o varios campos están vacíos.";
 		echo "<br/>";
-		echo "<a href='register.php'>Go back</a>";
+		echo "<a href='register.php'>volver</a>";
 	} else {
 		mysqli_query($mysqli, "INSERT INTO login(name, email, username, password) VALUES('$name', '$email', '$user', md5('$pass'))")
 			or die("No se pudo ejecutar la consulta de inserción.");
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])) {
 	}
 } else {
 ?>
-	<p><font size="+5">Registro</font></p>
+	<h1>Registro</h1>
 	<form name="form1" method="post" action="">
 		<table width="75%" border="0">
 			<tr> 
